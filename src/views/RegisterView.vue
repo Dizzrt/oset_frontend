@@ -1,5 +1,5 @@
 <!--
- * File: App.vue
+ * File: RegisterView.vue
  * Created by Dizzrt on 2023/02/03.
  * 
  * Copyright (C) 2023 The oset Authors.
@@ -8,11 +8,5 @@
  -->
 
 <template>
-  <RouterView />
+    register
 </template>
-
-<style scoped></style>
-
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>

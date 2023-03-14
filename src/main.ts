@@ -9,11 +9,15 @@
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import piniaPluginPersist from 'pinia-plugin-persist'
+
+import './assets/css/global.css'
+import 'element-plus/dist/index.css'
 
 import App from './App.vue'
-import router from './router'
-
 import axios from "axios"
+import router from './router'
+import ElementPlus from 'element-plus'
 
 const app = createApp(App)
 
@@ -21,7 +25,8 @@ axios.defaults.baseURL = "http://localhost:8080"
 
 app.provide("axios", axios)
 
-app.use(createPinia())
 app.use(router)
+app.use(ElementPlus)
+app.use(createPinia().use(piniaPluginPersist))
 
 app.mount('#app')

@@ -38,7 +38,7 @@ button {
     background-color: #3f9eff;
     text-align: center;
     text-decoration: none;
-    /* font-size: 14px; */
+    font-size: 14px;
     font-size: var(fontSize);
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -73,6 +73,9 @@ const props = defineProps({
     height: {
         type: String,
         default: '40px'
+    },
+    splitPercent: {
+        // type:
     },
     text: {
         type: String,
